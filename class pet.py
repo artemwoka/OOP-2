@@ -1,4 +1,4 @@
-
+#Артем Трет'яков
 class Pet:
     """Віртуальний вихованець."""
 
@@ -49,6 +49,7 @@ class Pet:
     def __str__(self):
         ans = "Об'єкт класу Pet\n"
         ans += "Ім'я: " + self.name + "\n"
+        ans += "Голод" + self.hunger +"одиниць \n нудьга" + self.boredom +"одиниць.\n"
         return ans
     
     @property
@@ -108,6 +109,9 @@ def main():
         elif choice == "4":
             new_name = input("Введіть нове ім'я: ")
             pet.name = new_name
+        
+        elif choice == "адмін":
+            print(pet)
 
         else:
             print("Вибачте, у меню немає пункту", choice)
