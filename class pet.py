@@ -32,14 +32,14 @@ class Pet:
               ", і зараз я почуваюся", self.mood)
         self._pass_time()
         
-    def eat(self, food=4):
+    def eat(self, food):
         print("Ммм... Дякую!")
         self.hunger -= food
         if self.hunger < 0:
             self.hunger = 0
         self._pass_time()
 
-    def play(self, fun=4):
+    def play(self, fun):
         print("Уiiii")
         self.boredom -= fun
         if self.boredom < 0:
@@ -98,10 +98,12 @@ def main():
             pet.talk()
 
         elif choice == "2":
-            pet.eat()
+            food = int(input("Скільки їжі дати звірятку? "))
+            pet.eat(food)
 
         elif choice == "3":
-            pet.play()
+            fun_time = int(input("Скільки часу гратися зі звірятком? "))
+            pet.play(fun_time)
 
         elif choice == "4":
             new_name = input("Введіть нове ім'я: ")
