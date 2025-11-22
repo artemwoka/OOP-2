@@ -4,7 +4,7 @@ class Student:
     def __init__(self, name, grades):
         """Ініціалізація студента з ім'ям та оцінками."""
         self.name = name
-        list(self.grades) = grades
+        self.grades = grades
     def average_grade (self):
         """Обчислює середню оцінку студента."""
         if len(self.grades) == 0:
@@ -16,6 +16,6 @@ def main():
     grades_input = input("Введіть оцінки студента через пробіл: ")
     grades = list(map(int, grades_input.split()))
     student = Student(name, grades)
-    print(f"Середня оцінка студента {student.name}: {student.average_grade():.2f}")
+    print(f"Середня оцінка студента {student.name}: {student.average_grade()}")
 
 main()
