@@ -49,7 +49,7 @@ class Pet:
     def __str__(self):
         ans = "Об'єкт класу Pet\n"
         ans += "Ім'я: " + self.name + "\n"
-        ans += "Голод" + self.hunger +"одиниць \n нудьга" + self.boredom +"одиниць.\n"
+        ans += "Голод " + str(self.hunger) + " одиниць \nнудьга " + str(self.boredom) +" одиниць.\n"
         return ans
     
     @property
